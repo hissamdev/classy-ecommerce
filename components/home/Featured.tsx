@@ -1,4 +1,4 @@
-import { ArrowRight, Heart, Star } from "lucide-react";
+import { ArrowRight, Heart, ShoppingCart, Star } from "lucide-react";
 import Image from "next/image";
 
 export default function Featured() {
@@ -26,14 +26,24 @@ export default function Featured() {
                                 className="object-cover group-hover:scale-110 transition-transform duration-500 "
                             />
 
-                            <div className="relative p-4 flex justify-between">
-                                <div className="w-fit flex flex-col gap-2">
-                                    <span className="inline w-fit text-center px-2 py-1 text-xs bg-black rounded-lg">Best Seller</span>
-                                    <span className="inline w-fit text-center px-2 py-1 text-xs bg-[#d4183d] rounded-lg">-40%</span>
+                            <div className="relative p-4 w-full h-full flex flex-col justify-between">
+                                <div className="w-full flex justify-between">
+                                    <div className="w-fit flex flex-col gap-2">
+                                        <span className="inline w-fit text-center px-2 py-1 text-xs bg-black rounded-lg">Best Seller</span>
+                                        <span className="inline w-fit text-center px-2 py-1 text-xs bg-[#d4183d] rounded-lg">-40%</span>
+                                    </div>
+                                    <div className="w-9 h-9 flex justify-center items-center transition-all opacity-0 group-hover:opacity-100 bg-white/90 hover:bg-white rounded-lg cursor-pointer">
+                                        <Heart className="text-black w-4" />
+                                    </div>
                                 </div>
 
-                                <div className="w-9 h-9 flex justify-center items-center transition-all opacity-0 group-hover:opacity-100 bg-white/90 hover:bg-white rounded-lg">
-                                    <Heart className="text-black w-4" />
+                                <div className="
+                                    py-2 flex justify-center items-center gap-3 text-sm font-bold bg-black 
+                                    transition-all translate-y-15 duration-300 group-hover:translate-y-0
+                                    hover:bg-[#1E2939] rounded-lg cursor-pointer
+                                ">
+                                    <ShoppingCart className="w-4" />
+                                    Add to Cart
                                 </div>
                             </div>
                         </div>
