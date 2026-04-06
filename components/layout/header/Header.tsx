@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-        <header className="bg-white">
+        <header className="sticky top-0 bg-white">
             <div className="sale-badge py-2 text-center text-sm bg-black">
                 <span>Free Shipping on Orders Over $50 | Summer Sale - Up to 70% Off</span>
             </div>
