@@ -27,7 +27,7 @@ export default function Hero() {
                 <ArrowRight className="w-5" />
                 </Link>
 
-                <Link href="/" className="px-4 py-2 w-fit flex items-center gap-2 text-black bg-white rounded-lg">
+                <Link href="/" className="px-4 py-2 w-fit flex items-center gap-2 text-black bg-white border border-white rounded-lg transition-all hover:text-white hover:bg-transparent hover:box-border hover:border">
                 View Collection
                 </Link>
             </div>
