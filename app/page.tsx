@@ -1,5 +1,6 @@
 import Category from "@/components/home/Category";
 import Featured from "@/components/home/Featured";
+import FlashSale from "@/components/home/FlashSale";
 import Hero from "@/components/home/Hero";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Category />
       <Featured />
+      <FlashSale />
     </>
   );
 }
