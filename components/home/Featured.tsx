@@ -1,6 +1,20 @@
 import { ArrowRight, Heart, ShoppingCart, Star } from "lucide-react";
 import Image from "next/image";
 
+const featured = [
+    {
+        name: "Premium Denim Jacket",
+        price: "89.99",
+        sale: "149.99",
+        reviews: "256",
+        image: "/assets/leather-jacket.png",
+        tags: [
+            { name: "Best Seller", variant: "black" },
+            { name: "-40%", variant: "red" },
+        ]
+    }
+]
+
 export default function Featured() {
     return (
         <section className="bg-white py-16">
