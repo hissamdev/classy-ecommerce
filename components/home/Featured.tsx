@@ -13,6 +13,18 @@ const featured = [
             { name: "Best Seller", variant: "black" },
             { name: "-40%", variant: "red" },
         ]
+    },
+
+    {
+        name: "Wireless Headphones Pro",
+        price: "199.99",
+        sale: "",
+        reviews: "432",
+        image: "/assets/headphone-and-telescope-lens.png",
+        imageAlt: "Leather jacket",
+        tags: [
+            { name: "New", variant: "black" },
+        ]
     }
 ]
 
@@ -31,7 +43,7 @@ export default function Featured() {
                     </div>
                 </div>
 
-                <div className="mt-8 grid grid-cols-4">
+                <div className="mt-8 grid grid-cols-4 gap-6">
                     {featured.map((product) => {
                         return (
                             <div key={product.name} className="shadow-lg rounded-2xl overflow-hidden group">
@@ -46,9 +58,19 @@ export default function Featured() {
                                     <div className="relative p-4 w-full h-full flex flex-col justify-between">
                                         <div className="w-full flex justify-between">
                                             <div className="w-fit flex flex-col gap-2">
-                                                <span className="inline w-fit text-center px-2 py-1 text-xs bg-black rounded-lg">Best Seller</span>
-                                                <span className="inline w-fit text-center px-2 py-1 text-xs bg-[#d4183d] rounded-lg">-40%</span>
+                                                {product.tags.map((tag) => {
+                                                    return (
+                                                        <span
+                                                            key={tag.name}
+                                                            className={`inline w-fit text-center px-2 py-1 text-xs rounded-lg
+                                                                ${tag.variant === "black" ? "bg-black" : "bg-[#d4183d]"}
+                                                        `}>
+                                                            {tag.name}
+                                                        </span>
+                                                    );
+                                                })}
                                             </div>
+
                                             <div className="w-9 h-9 flex justify-center items-center transition-all opacity-0 group-hover:opacity-100 bg-white/90 hover:bg-white rounded-lg cursor-pointer">
                                                 <Heart className="text-black w-4" />
                                             </div>
@@ -56,7 +78,7 @@ export default function Featured() {
 
                                         <div className="
                                             py-2 flex justify-center items-center gap-3 text-sm font-bold bg-black 
-                                            transition-all translate-y-15 duration-300 group-hover:translate-y-0
+                                            transition-all translate-y-15 duration-100 group-hover:translate-y-0
                                             hover:bg-[#1E2939] rounded-lg cursor-pointer
                                         ">
                                             <ShoppingCart className="w-4" />
@@ -77,7 +99,7 @@ export default function Featured() {
                                             <Star className="w-3 text-gray-300 hover:fill-yellow-400 hover:text-yellow-400" />
                                         </div>
 
-                                        <div className="text-gray-500 text-xs">(256)</div>
+                                        <div className="text-gray-500 text-xs">({product.reviews})</div>
                                     </div>
 
                                     <div className="mt-3 flex items-center gap-2 text-black">
