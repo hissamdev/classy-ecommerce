@@ -11,6 +11,7 @@ export default function FeaturedBrands() {
                     {brands.map((brand) => {
                         return (
                             <h3
+                                key={brand}
                                 className="flex-1 flex justify-center items-center
                                 text-xl font-bold text-gray-400 hover:text-gray-900
                                 bg-gray-50 hover:bg-gray-100 rounded-xl
