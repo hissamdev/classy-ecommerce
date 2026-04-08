@@ -1,4 +1,4 @@
-import { ArrowRight, Heart, ShoppingCart, Star } from "lucide-react";
+import { ArrowRight, Heart, ShoppingCart, Star, VariableIcon } from "lucide-react";
 import Image from "next/image";
 
 const featured = [
@@ -24,6 +24,76 @@ const featured = [
         imageAlt: "Leather jacket",
         tags: [
             { name: "New", variant: "black" },
+        ]
+    },
+
+    {
+        name: "Classic Slim Fit Jeans",
+        price: "59.99",
+        sale: "89.99",
+        reviews: "189",
+        image: "/assets/slim-fit-jeans.png",
+        imageAlt: "Classic Slim Fit Jeans",
+        tags: [
+            { name: "-33%", variant: "red" },
+        ]
+    },
+
+    {
+        name: "Urban Backpack",
+        price: "79.99",
+        sale: "",
+        reviews: "298",
+        image: "/assets/school-bags.png",
+        imageAlt: "Urban Backpack",
+        tags: []
+    },
+
+    {
+        name: "Casual Cotton T-Shirt",
+        price: "24.99",
+        sale: "39.99",
+        reviews: "567",
+        image: "/assets/cotton-t-shirt.png",
+        imageAlt: "Casual Cotton T-Shirt",
+        tags: [
+            { name: "-38%", variant: "red" }
+        ]
+    },
+
+    {
+        name: "Leather Wallet",
+        price: "49.99",
+        sale: "",
+        reviews: "123",
+        image: "/assets/leather-wallet.png",
+        imageAlt: "Leather Wallet",
+        tags: [
+            { name: "Trending", variant: "black" }
+        ]
+    },
+
+    {
+        name: "Running Shoes Elite",
+        price: "129.99",
+        sale: "179.99",
+        reviews: "412",
+        image: "/assets/leather-wallet.png",
+        imageAlt: "Running Shoes Elite",
+        tags: [
+            { name: "-28%", variant: "red" }
+        ]
+    },
+
+    {
+        name: "Designer Sunglasses",
+        price: "159.99",
+        sale: "",
+        reviews: "234",
+        image: "/assets/shaded-sunglasses.png",
+        imageAlt: "Designer Sunglasses",
+        tags: [
+            { name: "Limited", variant: "black" }
         ]
     }
 ]
