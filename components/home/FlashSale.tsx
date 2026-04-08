@@ -39,7 +39,7 @@ export default function FlashSale() {
                     </div>
                 </div>
 
-                <div className="relative aspect-square w-70 overflow-hidden rounded-xl">
+                <div className="relative aspect-square max-w-70 w-full overflow-hidden rounded-xl">
                     <Image
                         alt="Shoe purple"
                         src="/assets/sneakers-cyan-orange.png"
