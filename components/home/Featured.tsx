@@ -1,7 +1,7 @@
 import { ArrowRight, Heart, ShoppingCart, Star, VariableIcon } from "lucide-react";
 import Image from "next/image";
 
-const featured = [
+export const productList = [
     {
         name: "Premium Denim Jacket",
         price: "89.99",
@@ -12,7 +12,9 @@ const featured = [
         tags: [
             { name: "Best Seller", variant: "black" },
             { name: "-40%", variant: "red" },
-        ]
+        ],
+        bestSeller: true,
+        category: [ "men" ]
     },
 
     {
@@ -24,7 +26,9 @@ const featured = [
         imageAlt: "Leather jacket",
         tags: [
             { name: "New", variant: "black" },
-        ]
+        ],
+        bestSeller: true,
+        category: [ "kids" ]
     },
 
     {
@@ -36,7 +40,9 @@ const featured = [
         imageAlt: "Classic Slim Fit Jeans",
         tags: [
             { name: "-33%", variant: "red" },
-        ]
+        ],
+        bestSeller: true,
+        category: [ "women" ]
     },
 
     {
@@ -46,7 +52,9 @@ const featured = [
         reviews: "298",
         image: "/assets/school-bags.png",
         imageAlt: "Urban Backpack",
-        tags: []
+        tags: [],
+        bestSeller: true,
+        category: [ "men" ]
     },
 
     {
@@ -58,7 +66,9 @@ const featured = [
         imageAlt: "Casual Cotton T-Shirt",
         tags: [
             { name: "-38%", variant: "red" }
-        ]
+        ],
+        bestSeller: true,
+        category: [ "men" ]
     },
 
     {
@@ -70,7 +80,9 @@ const featured = [
         imageAlt: "Leather Wallet",
         tags: [
             { name: "Trending", variant: "black" }
-        ]
+        ],
+        bestSeller: true,
+        category: [ "men" ]
     },
 
     {
@@ -82,7 +94,9 @@ const featured = [
         imageAlt: "Running Shoes Elite",
         tags: [
             { name: "-28%", variant: "red" }
-        ]
+        ],
+        bestSeller: true,
+        category: [ "kids" ]
     },
 
     {
@@ -94,7 +108,9 @@ const featured = [
         imageAlt: "Designer Sunglasses",
         tags: [
             { name: "Limited", variant: "black" }
-        ]
+        ],
+        bestSeller: true,
+        category: [ "women" ]
     }
 ]
 
@@ -114,7 +130,7 @@ export default function Featured() {
                 </div>
 
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {featured.map((product) => {
+                    {productList.map((product) => {
                         return (
                             <div key={product.name} className="shadow-lg rounded-2xl overflow-hidden group">
                                 <div className="relative w-full h-89 overflow-hidden">

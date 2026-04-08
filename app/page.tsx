@@ -1,3 +1,4 @@
+import BestSellers from "@/components/home/BestSellers";
 import Category from "@/components/home/Category";
 import Featured from "@/components/home/Featured";
 import FlashSale from "@/components/home/FlashSale";
@@ -10,6 +11,7 @@ export default function Home() {
       <Category />
       <Featured />
       <FlashSale />
+      <BestSellers />
     </>
   );
 }
