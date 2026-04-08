@@ -78,7 +78,7 @@ const featured = [
         price: "129.99",
         sale: "179.99",
         reviews: "412",
-        image: "/assets/leather-wallet.png",
+        image: "/assets/running-shoes-elite.png",
         imageAlt: "Running Shoes Elite",
         tags: [
             { name: "-28%", variant: "red" }
