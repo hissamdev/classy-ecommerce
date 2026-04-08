@@ -4,6 +4,7 @@ import Featured from "@/components/home/Featured";
 import FeaturedBrands from "@/components/home/FeaturedBrands";
 import FlashSale from "@/components/home/FlashSale";
 import Hero from "@/components/home/Hero";
+import Newsletter from "@/components/home/Newsletter";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <FlashSale />
       <BestSellers />
       <FeaturedBrands />
+      <Newsletter />
     </>
   );
 }
