@@ -1,25 +1,26 @@
 import { LocateIcon, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { FaLinkedinIn } from "react-icons/fa";
+import {
+    FiFacebook,
+    FiGithub,
+    FiInstagram,
+    FiLinkedin,
+    FiTwitter,
+    FiUpload,
+    FiYoutube,
+} from "react-icons/fi";
 
 export default function Footer() {
     const links = [
         {
             name: "Shop",
-            items: [
-                "New Arrivals",
-                "Best Sellers",
-                "Sale",
-                "Gift Cards",
-            ]
+            items: ["New Arrivals", "Best Sellers", "Sale", "Gift Cards"],
         },
         {
             name: "Company",
-            items: [
-                "About Us",
-                "Careers",
-                "Press",
-                "Sustainability"
-            ]
+            items: ["About Us", "Careers", "Press", "Sustainability"],
         },
         {
             name: "Help",
@@ -27,8 +28,8 @@ export default function Footer() {
                 "Customer Service",
                 "Shipping & Returns",
                 "Size Guide",
-                "FAQ"
-            ]
+                "FAQ",
+            ],
         },
         {
             name: "Legal",
@@ -36,10 +37,10 @@ export default function Footer() {
                 "Terms of Service",
                 "Privacy Policy",
                 "Cookie Policy",
-                "Accessibility"
-            ]
-        }
-    ]
+                "Accessibility",
+            ],
+        },
+    ];
 
     return (
         <footer className="py-16 bg-gray-900">
@@ -47,60 +48,104 @@ export default function Footer() {
                 <div className="top pb-6 grid grid-cols-6 gap-8">
                     <div className="col-span-2">
                         {/* Heading */}
-                        <h2 className="mb-4 text-xl uppercase font-bold">Shop</h2>
+                        <h2 className="mb-4 text-xl uppercase font-bold">
+                            Shop
+                        </h2>
 
                         <div className="space-y-3">
-                            <p className="text-sm text-gray-300">Your destination for quality fashion and lifestyle products. We bring you the latest trends at the best prices.</p>
+                            <p className="text-sm text-gray-300">
+                                Your destination for quality fashion and
+                                lifestyle products. We bring you the latest
+                                trends at the best prices.
+                            </p>
 
                             <div className="flex items-center gap-2">
                                 <MapPin className="w-4" />
-                                <span className="text-sm text-gray-300">123 Fashion Street, NY 10001</span>
+                                <span className="text-sm text-gray-300">
+                                    123 Fashion Street, NY 10001
+                                </span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Phone className="w-4" />
-                                <span className="text-sm text-gray-300">+1 (555) 123-4567</span>
+                                <span className="text-sm text-gray-300">
+                                    +1 (555) 123-4567
+                                </span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Mail className="w-4" />
-                                <span className="text-sm text-gray-300">hissamdev@gmail.com</span>
+                                <span className="text-sm text-gray-300">
+                                    hissamdev@gmail.com
+                                </span>
                             </div>
                         </div>
                     </div>
                     {links.map((section) => {
                         return (
-                            <div className="flex-1">
-                                <h3 className="mb-4 text-md font-bold">{section.name}</h3>
+                            <div key={section.name} className="flex-1">
+                                <h3 className="mb-4 text-md font-bold">
+                                    {section.name}
+                                </h3>
                                 <ul className="space-y-2">
                                     {section.items.map((item) => {
                                         return (
-                                            <li>
-                                                <Link href="/" className="transition-colors text-sm text-gray-300 hover:text-white">{item}</Link>
+                                            <li key={item}>
+                                                <Link
+                                                    href="/"
+                                                    className="transition-colors text-sm text-gray-300 hover:text-white"
+                                                >
+                                                    {item}
+                                                </Link>
                                             </li>
-                                        )
+                                        );
                                     })}
                                 </ul>
                             </div>
-                        )
+                        );
                     })}
                 </div>
 
                 <div className="pt-6 flex justify-between items-center border-t border-gray-800">
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-5">
                         <span className="text-sm">Follow Us:</span>
-                        Icon
+                        <FiFacebook
+                            size={22}
+                            className="cursor-pointer transition-colors text-white/70 hover:text-white"
+                        />
+                        <FiInstagram
+                            size={22}
+                            className="cursor-pointer transition-colors text-white/70 hover:text-white"
+                        />
+                        <FiTwitter
+                            size={22}
+                            className="cursor-pointer transition-colors text-white/70 hover:text-white"
+                        />
+                        <FiYoutube
+                            size={22}
+                            className="cursor-pointer transition-colors text-white/70 hover:text-white"
+                        />
                     </div>
 
                     <div className="flex items-center gap-2 text-xs">
                         <span className="text-gray-300">We Accept:</span>
-                        <span className="px-2 py-1 text-black font-semibold bg-white rounded">VISA</span>
-                        <span className="px-2 py-1 text-black font-semibold bg-white rounded">MC</span>
-                        <span className="px-2 py-1 text-black font-semibold bg-white rounded">AMEX</span>
-                        <span className="px-2 py-1 text-black font-semibold bg-white rounded">PayPal</span>
+                        <span className="px-2 py-1 text-black font-semibold bg-white rounded">
+                            VISA
+                        </span>
+                        <span className="px-2 py-1 text-black font-semibold bg-white rounded">
+                            MC
+                        </span>
+                        <span className="px-2 py-1 text-black font-semibold bg-white rounded">
+                            AMEX
+                        </span>
+                        <span className="px-2 py-1 text-black font-semibold bg-white rounded">
+                            PayPal
+                        </span>
                     </div>
                 </div>
 
-                <p className="mt-6 text-sm text-gray-500 text-center">© 2026 SHOP. All rights reserved.</p>
+                <p className="mt-6 text-sm text-gray-500 text-center">
+                    © 2026 SHOP. All rights reserved.
+                </p>
             </div>
         </footer>
-    )
+    );
 }
